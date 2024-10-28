@@ -2,7 +2,7 @@ name: "Sample react CI pipeline"
 
 on:
  push:
-    Branches:
+    branches:
         - master
 
 jobs:
@@ -10,10 +10,10 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-         - name: "Setup node JS"
-           uses: actions/setup-node@v4
+         - name: "Setup Node JS"
+           uses: actions/setup-node@v3
            with:
-              node-version:'21'
+             node-version: '20'
 
          - name: "Check node version"
            run: node --version
